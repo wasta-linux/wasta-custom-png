@@ -1,0 +1,96 @@
+wasta-custom-png (0.1.13) trusty; urgency=medium
+
+  * Initial GitHub / Launchpad commit
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 14 Oct 2015 15:48:54 +0300
+
+wasta-custom-png (0.1.12) precise; urgency=low
+
+  * Moved Ukarumpa Software Sources to wasta-custom-png-uka
+  * Minor cleanup of files
+  * Removed app dependencies (located in wasta-custom-png-xyz packages)
+  * Added wasta-resources-png dependency
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Fri, 09 May 2014 11:15:47 -0500
+
+wasta-custom-png (0.1.11) precise; urgency=low
+
+  * Removing LibreOffice custom setup, replacing with standard
+    LibreOffice extension installed at system level.  If a user
+    is not getting the settings, they may need to remove their
+    current ~/.config/libreoffice folder (user level settings would
+    override system level extension settings).
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Fri, 25 Apr 2014 13:58:19 -0500
+
+wasta-custom-png (0.1.10) precise; urgency=low
+
+  * adding Boug kmfl keyboard
+
+ -- Kim Blewett <kblewett@gmail.com>  Wed, 05 Feb 2014 12:01:07 -0600
+
+wasta-custom-png (0.1.9) precise; urgency=low
+
+  * uka-repos: rename desktop launcher "Ukarumpa Software Sources", match
+    icons, etc, from "Software Sources".  Also commented out uka FTP repos
+    that haven't been created yet (PNG IT needs to add first).
+  * lo-set-png-defaults: syntax fix
+  * added xmlstarlet dependency
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 29 Jan 2014 12:01:15 -0600
+
+wasta-custom-png (0.1.8) precise; urgency=low
+
+  * uka-repos: clean out ftp.sil.org.pg lines from sources.list before
+    inserting lines from uka-sources.list.  This way any removed lines
+    from uka-sources.list will still be removed from sources.list
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 27 Jan 2014 17:02:19 -0600
+
+wasta-custom-png (0.1.7) precise; urgency=low
+
+  * uka-repos: syntax fixes for $APT_SOURCES
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 27 Jan 2014 16:25:30 -0600
+
+wasta-custom-png (0.1.6) precise; urgency=low
+
+  * control: adding 'menu' dependency needed for su-to-root for uka-repos.sh
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 27 Jan 2014 15:28:57 -0600
+
+wasta-custom-png (0.1.5) precise; urgency=low
+
+  * uka-repos: .desktop command fix
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 27 Jan 2014 15:22:00 -0600
+
+wasta-custom-png (0.1.4) precise; urgency=low
+
+  * lo registrymodifications.xcu: fixing since can't rename during install
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 27 Jan 2014 15:16:14 -0600
+
+wasta-custom-png (0.1.3) precise; urgency=low
+
+  * uka-repos: initial script.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 27 Jan 2014 14:30:02 -0600
+
+wasta-custom-png (0.1.2) precise; urgency=low
+
+  * lo-set-png-defaults: Added documentation of lo png settings defaults
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 20 Jan 2014 14:48:49 -0600
+
+wasta-custom-png (0.1.1) precise; urgency=low
+
+  * Corrected series to be "precise" instead of debian "unstable"
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 20 Jan 2014 14:18:07 -0600
+
+wasta-custom-png (0.1.0) precise; urgency=low
+
+  * Initial Release.
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Mon, 20 Jan 2014 05:08:15 -0600
