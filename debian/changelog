@@ -1,3 +1,9 @@
+wasta-custom-png (1.0.0) trusty; urgency=medium
+
+  * version bump to 1.0.0
+
+ -- Rik Shaw <rikshaw76@gmail.com>  Wed, 14 Oct 2015 16:05:24 +0300
+
 wasta-custom-png (0.1.13) trusty; urgency=medium
 
   * Initial GitHub / Launchpad commit
