@@ -1,3 +1,9 @@
+wasta-custom-png (1.0.1) xenial; urgency=medium
+
+  * test build for xenial
+
+ -- Kim Blewett <kim_blewett@sil.org>  Sat, 01 Jul 2017 13:09:50 -0500
+
 wasta-custom-png (1.0.0) trusty; urgency=medium
 
   * version bump to 1.0.0

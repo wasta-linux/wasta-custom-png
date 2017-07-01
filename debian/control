@@ -6,9 +6,8 @@ Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
 
 Package: wasta-custom-png
-Architecture: any
-Depends: ibus-kmfl, kmfl-keyboard-ipa, wasta-base-setup (>= 0.5.0), wasta-resources-png, ${shlibs:Depends}, ${misc:Depends}
-Description: wasta-Linux PNG customization
- Customizes wasta-Linux with PNG adjustments, including:
-    - PNG kfml keyboards
+Architecture: all
+Depends: wasta-core-xenial, ${shlibs:Depends}, ${misc:Depends}
+Description: Wasta-Linux PNG customization
+ Customizes Wasta-Linux with PNG adjustments, including:
     - LibreOffice Int'l English defaults (.doc, .xls, metric, etc)
