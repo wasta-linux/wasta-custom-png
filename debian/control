@@ -8,8 +8,8 @@ Standards-Version: 3.9.3
 Package: wasta-custom-png
 Architecture: all
 Depends: wasta-core-xenial, ${shlibs:Depends}, ${misc:Depends}
-Recommends: ibus-gtk, ibus-gtk3, ibus-kmfl
+Recommends: ibus-gtk, ibus-gtk3, ibus-kmfl, tlp, tp-smapi-dkms, acpi-call-dkms, cups-pdf
 Description: Wasta-Linux PNG customization
  Customizes Wasta-Linux with PNG adjustments, including:
     - LibreOffice Int'l English defaults (.doc, .xls, metric, etc)
-    - kmfl ibus: ready for keyboard layouts
+    - kmfl ibus: contains sample keyboard layouts

@@ -1,0 +1,31 @@
+c Keyboard for LanguageName, Province, person who works there  c Edit these items
+c Prepared by Kim Blewett, SAMPLE keyboard for Keyman and KMFL
+c 20-Feb-2017
+
+NAME "EngsAndGlottals"   c change to LanguageName in the quotation marks
+BITMAP "Ng.bmp"           c replace with the Icon file you wish to use, in quotation marks
+VERSION 7.0              c for Linux/Wasta, keep the version number at 7.0 or below
+
+c This keyboard should be independent of the user's system keyboard layout
+c For help see the Language Software Services office (lr-lss@sil.org.pg)
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main)
+
+group(main) using keys
+
+c to type ŋ and Ŋ use ;n and ;N
+';' + 'n' > U+014B    c lower case eng  ŋ
+';' + 'N' > U+014A    c upper case eng  Ŋ
+':' + 'N' > U+014A    c in case SHIFT key is pressed first
+
+c to type straight glottal use ; and :
+';' + ';' > U+A78C    c ꞌ Saltillo (straight glottal)
+':' + ':' > U+A78B    c Ꞌ Saltillo (upper case)
+
+c to type curly glottal use ;'
+';' + "'" > U+02BC    c uncomment to use this line
+
+

@@ -1,0 +1,28 @@
+c Keyboard for Ngaing language, Madang, Barbara Hodgkinson  c Edit these items
+c Prepared by Kim Blewett, SAMPLE keyboard for Keyman and KMFL
+c 20-Feb-2017
+
+NAME "Ngaing"   c change to LanguageName in the quotation marks
+BITMAP "Ng.bmp"           c replace with the Icon file you wish to use, in quotation marks
+VERSION 7.0              c for Linux/Wasta, keep the version number at 7.0 or below
+
+c This keyboard should be independent of the user's system keyboard layout
+c For help see the Language Software Services office (lr-lss@sil.org.pg)
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main)
+
+group(main) using keys
+
+c to type ŋ and Ŋ use ;n and ;N
+U+014B > '='    c lower case eng  ŋ
+U+014A > '='    c upper case eng  Ŋ
+U+014A > '='    c in case SHIFT key is pressed first
+
+c to type caret use 'v' and '-'
+U+028c > '='    c lower case eng  ʌ
+U+0245 > '='    c upper case eng  Ʌ
+U+0245 > '='    c in case SHIFT key is pressed first
+

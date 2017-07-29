@@ -1,0 +1,30 @@
+c Keyboard for Siar-Lak, NIP, Karen Rowe  c Edit these items
+c Prepared by Kim Blewett, keyboard for Keyman and KMFL
+c 20-Feb-2017
+
+NAME "SiarLak"        c change to LanguageName in the quotation marks
+BITMAP "L.bmp"        c replace with the Icon file you wish to use, in quotation marks
+VERSION 7.0           c for Linux/Wasta, keep the version number at 7.0 or below
+
+c This keyboard should be independent of the user's system keyboard layout
+c For help see the Language Software Services office (lr-lss@sil.org.pg)
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main) 
+
+group(main) using keys
+
+c replace the ; with your desired trigger key in each line below. You may swap places so the
+c trigger key comes after the vowel, e.g., 'a' + ';' > U+00E1
+c the c starts a comment; add notes if needed to help someone else understand
+
+';' + 'e' > U+00E9    c [é]
+';' + 'o' > U+00F3    c [ó]
+
+';' + 'E' > U+00C9    c [É]
+';' + 'O' > U+00D3    c [Ó]
+
+';' + ';' > U+003B    c [;]
+

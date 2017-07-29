@@ -1,0 +1,16 @@
+﻿c Generic sample keyboard using / as combining character
+c (Created by Keyman Developer 6.1.166.1)
+
+
+NAME "bar_I_unicode"
+VERSION 5.0
+
+begin Unicode > use(main)
+
+group(main) using keys
+'/' +'i' > 'ɨ'    c U+0268
+'/' +'I' > 'Ɨ'    c U+0197
+'/' +'n' > 'ŋ'    c U+014B
+'/' +'N' > 'Ŋ'    c U+014A
+
+c EOF

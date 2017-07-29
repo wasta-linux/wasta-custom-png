@@ -1,0 +1,30 @@
+c Keyboard for LanguageName, Province, person who works there  c Edit these items
+c Prepared by Kim Blewett, SAMPLE keyboard for Keyman and KMFL
+c 20-Feb-2017
+
+NAME "DiaeresisVs"    c change to LanguageName in the quotation marks
+BITMAP "D.bmp"        c replace with the Icon file you wish to use, in quotation marks
+VERSION 7.0           c for Linux/Wasta, keep the version number at 7.0 or below
+
+c This keyboard should be independent of the user's system keyboard layout
+c For help see the Language Software Services office (lr-lss@sil.org.pg)
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main) 
+
+group(main) using keys
+
+c diaeresis vowels  ÄËÏÖÜäëïöü
+';' + 'a' > U+00E4    c ä
+';' + 'e' > U+00EB    c ë
+';' + 'i' > U+00EF    c ï
+';' + 'o' > U+00F6    c ö
+';' + 'u' > U+00FC    c ü
+
+';' + 'A' > U+00C4    c Ä
+';' + 'E' > U+00CB    c Ë
+';' + 'I' > U+00CF    c Ï
+';' + 'O' > U+00D6    c Ö
+';' + 'U' > U+00DC    c Ü

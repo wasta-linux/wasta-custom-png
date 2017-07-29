@@ -1,0 +1,20 @@
+Prep/Setup
+1. Check to see if they have 'iBus' (type Windows key, type iBus)
+1b. If it's Wasta there should already be an 'EN' icon in the tray so you're good.
+2. If they do, you'll see "Do you want to run the iBus daemon?") Say yes.
+2b. If they don't, bring the computer up to Uka.
+3. You should see an icon in the bottom right "tray", probably 'EN'. Proceed...
+
+Install keyboard
+1. Open Files (Type Windows key, type 'files')
+2. Show Hidden Files (tick on View Menu)
+3. Browse to .local, then share (double-click to open)
+4. Copy 'kmfl' folder into 'share'
+   (you're done in Files)
+
+Update iBus
+1.
+
+Peter Fidock network-support@wycliffe.org.au
+set the computer up (donated computers) (Vico?)
+Bruce?

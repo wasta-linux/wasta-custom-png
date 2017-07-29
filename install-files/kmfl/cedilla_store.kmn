@@ -1,0 +1,39 @@
+c Keyboard for LanguageName, Province, person who works there  c Edit these items
+c Prepared by Kim Blewett, SAMPLE keyboard for Keyman and KMFL
+c 20-Feb-2017
+
+NAME "Cedilla"     c change to LanguageName in the quotation marks
+BITMAP "C.bmp"        c replace with the Icon file you wish to use, in quotation marks
+VERSION 7.0           c for Linux/Wasta, keep the version number at 7.0 or below
+
+c This keyboard uses stored character sets rather than stating each vowel separately,
+c   per Keyman Developer Manual
+c it should be independent of the user's system keyboard layout
+c For help see the Language Software Services office (lr-lss@sil.org.pg)
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main) 
+
+group(main) using keys
+
+c replace the c with your desired trigger key in each line below. You may swap places so the
+c trigger key comes before the vowel, e.g., 'c' + any(vowel) 
+c the c starts a comment; add notes if needed to help someone else understand
+
+store(vowel)	"aeiouAEIOU"
+store(vacute)	"éóÉÓ"
+
+group(main) using keys
+
+c Nasalized vowels (with combining cedilla U+0327)
+any(vowel) + 'c'  > context U+0327  c a̧ A̧ ȩ Ȩ i̧ I̧ o̧ O̧ u̧ U̧
+any(vacute) + 'c' > context U+0327  c ȩ́ Ȩ́ ó̧ Ó̧
+any(vowel) + 'C'  > context U+0327  c in case shift key is pressed
+any(vacute) + 'C' > context U+0327  c 
+
+c to type 'c' precede it with semicolon
+';' + 'c' > 'c'
+';' + 'C' > 'C'
+

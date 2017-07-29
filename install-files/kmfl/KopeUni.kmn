@@ -1,0 +1,26 @@
+c Keyboard for Kope Gulf Province (Hanna Shulz)
+c UNICODE version
+c Windows Keyman Version 7.0
+c  K Blewett, Jan 2017
+
+NAME "Kope Unicode"
+BITMAP "K.bmp"
+VERSION 7.0
+
+c This keyboard should be independent of the user's
+c system keyboard layout
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main)
+
+group(main) using keys
+
+c to type glottals use ; and :
+';' + ';' > U+A78C    c ꞌ Saltillo (straight glottal)
+':' + ':' > U+A78B    c Ꞌ Saltillo (upper case)
+
+
+
+

@@ -1,0 +1,165 @@
+﻿c Custom Keyboard for Unicode conversions of NS language projects, 
+c with Scripture enhancements: typographers quotes & m-dash    
+c also has phonetic characters, keyed with q or x. 
+c      Phonetic characters cycle through variants, InKey style.
+c Alt+angle brackets yield curly quotes.
+c All diacritics are *precomposed forms*. Thus no rules containing 
+c      vowel classes {aeiou} modified with diacritics.
+c This keyboard should match autocorrect.txt files for Bougainville PT projects but those not yet updated.
+c Windows Keyman Version 6.0 
+c written by K Blewett, 28 June 2004, revised 1/2014 for recent Boug. orthography testing
+c Version 1.02, filename: BOUG2016-103.kmn
+c Typographic quotes disabled to see if kbd issues in Fieldworks go away
+
+NAME "Bougainville 2016"
+BITMAP BOUG
+HOTKEY "^+B"
+VERSION 6.0
+
+c This keyboard should be independent of the user's
+c system keyboard layout, except for angle-brackets which are 
+c typed with SH-ALT-period + comma on US keyboard
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main)
+
+group(main) using keys
+
+c Vasui vowels & glottals, no deadkeys (dk version Rap.kmn)
+';' + 'e'	>  U+00EB 	    c d235    ë 
+';' + 'o'	>  U+00F6 		 c  d246   ö 
+':' + 'E'	>  U+00CB 		 c  d203   Ë 
+':' + 'O'	>  U+00D6 	  c  d214   Ö 
+';' + 'E'	>  U+00CB       c works with both ';' and shifted ':' for upper case forms
+';' + 'O'	>  U+00D6        c  works with both ';' and shifted ':' for upper case forms
+';' + 'c'	> U+0254    c reversed c   ɔ 
+';' + 'a'	>  U+00E4 		 c 'ä'
+';' + 'A'   >  U+00C4          c 'Ä'
+':' + 'A'   >  U+00C4          c 'Ä'
+';' + 'i'   >  U+00EF          c 'ï'
+';' + 'I'   >  U+00CF          c 'Ï'
+ ';' + 'u'   >  U+00FC          c 'ü'
+';' + 'U'   >  U+00DC          c 'Ü'
+';' + 'v'   >  U+028C           c 'ʌ'
+';' + 'V'   >  U+0245          c 'Ʌ'
+
+
+';' + "'"	> U+02BC      c Rapoisi & Vasui curly glottal
+';' + ';'	> U+A78C      c Sibe straight glottal
+
+';' + U+2019 > U+02BC   c to cover curly glottal with "smart quotes" in Word
+
+
+c Buin consonants & long vowels
+';'+'n'> U+014B   c lower case eng  ŋ 
+';'+'N'> U+014A  c upper case eng  Ŋ 
+
+c Combining double macron ( U+035E )
+c STEP 1 [V + =]  yields bar-V with macron
+c specified this 2-step method so that '=' typed in other contexts yields normal '='
+'a' + '='> U+0101	 c ā transitional forms (testing use in Petats 2/2014)
+'e' + '='> U+0113        c ē 
+'i' + '='> U+012B        c ī 
+'o' + '='> U+014D        c ō 
+'u' + '='> U+016B        c ū 
+c Uppercase forms
+'A' + '='> U+0100	 c Ā transitional forms
+'E' + '='> U+0112         c Ē 
+'I' + '='> U+012A        c Ī
+'O' + '='> U+014C        c Ō 
+'U' + '='> U+016A        c Ū 
+
+c New method for combining double macron ( U+035E )
+c STEP 2 [bar-V + same V] yields vv with double macron
+U+0101 + 'a'	> 'a'  U+035E   'a'           c double barred vowels (long line above the vv)
+U+0113 + 'e'	> 'e'  U+035E   'e'
+U+012B + 'i'	> U+0131  U+035E   U+0131     c dotless i in this combo
+U+014D + 'o'	> 'o'  U+035E   'o'
+U+016B + 'u'	> 'u'  U+035E   'u'                                             
+c Uppercase forms
+U+0100 + 'a'	> 'A'  U+035E   'a'           c double barred vowels (long line above the vv)
+U+0112 + 'e'	> 'E'  U+035E   'e'
+U+012A + 'i'	> 'I'  U+035E   U+0131     c dotless i in this combo
+U+014C + 'o'	> 'O'  U+035E   'o'
+U+016A + 'u'	> 'U'  U+035E   'u'                                             
+
+
+c ----------- PUNCTUATION CHARACTERS ----------- 
+c Scripture typing helps: typographical quotes & dashes
+c you must type the second '<' or '>' without holding down ALT
+c + [SHIFT ALT K_COMMA]  > U+2018      c [alt + '<'] yields open single quote
+c U+2018     + '<'  > U+201C           c [alt + '<<'] yields open double quote
+c U+2018 ' ' + '<'  > U+2018  U+2018      c to handle < <<
+c U+201C ' ' + '<'  > U+201C  U+2018      c to handle << <
+
+c         + '>'  > U+2019           
+c + [SHIFT ALT K_PERIOD]  > U+2019     c [alt + '>'] yields close single quote, parallel to open quotes above
+c U+2019     + '>'  > U+201D           c [alt + '>>'] yields close double quote
+c U+2019 ' ' + '>'  > U+2019 U+2019       c to handle > >>
+c U+201D ' ' + '>'  > U+201D U+2019       c to handle >> >
+
+'-'      + '-'  > U+2014          c em-dash 
+';' + '-' > U+2011                c non-breaking hyphen   
+'`' + '-' > U+00ad                c soft hyphen
+
+
+c ----------- PHONETIC CHARACTERS ----------- 
+c for phonology papers ONLY, not for orthographies
+c 
+c 'q' triggers for most phonetic, Greek & orthog. chars, except for variations
+c 'x' trigger for 'u' variants
+c these cycle through variants, InKey style
+
+c glottal stop legacy and phonetic forms
+U+02BC + "'"  > U+00DF     c to enter old glottal position d223 'sharp s'
+';' + '?'  > U+0294 	 c phonetic glottal stop char
+
+c Cycle through variations of a
+'q' + 'a' >  U+0251      c phonetic or literacy  ɑ 
+U+0251 + 'a' > U+03B1        c type 'qaa' for alpha    α  
+U+03B1 + 'a' > U+00E6       c type 'qaaa' for ae  æ 
+
+c Cycle through variations of e/schwa
+'q' + 'e' > U+025B       c phonetic open ɛ  
+U+025B + 'e' > U+0259       c type 'qee' for phonetic schwa    ə 
+U+0259 + 'e' > U+028C   c type 'qeee' for phonetic low schwa  ʌ    
+
+c Cycle through variations of g
+'q' + 'g' > U+0261       c literacy g      
+U+0261 + 'g' > U+0263        c type 'qgg' for phonetic gamma   ɣ 
+
+c Cycle through variations of s
+'q' + 's' >  U+03C3       c sigma (syllable node)    σ 
+U+03c3 + 's' > U+015F      c type 'qss' for syllabic-s  ş  
+U+015F + 's' > U+1E63    c type 'qsss' for s with dot below (Doulos or Gentian)  ṣ 
+
+c Cycle through variations of i
+'q' + 'i' >   U+0269      c dotless ɩ, curly tail
+U+0269 + 'i' >   U+0131      c dotless, straight tail
+U+0131 + 'i' > U+0268   c bar-i   ɨ 
+
+'q' + 'p' > U+03C6       c phi φ 
+'q' + 'b' > U+03B2        c beta      β 
+'q' + 'r' >  U+027E        c phonetic flap 'r  with fishhook'   ɾ 
+'q' + 'o' > U+0254       c 'open o'   ɔ 
+
+c Cycle through variations of upsilon, to avoid "qu"  combos
+'x' + 'u' > U+03c5        c Greek upsilon   υ  , in Lucida & Gentian
+U+03c5 + 'u' > U+028a    c Latin upsilon  ʊ , for Doulos which lacks Greek chars
+
+c Acute-accented vowels for phonology paper   
+'`' + 'a' > u+00e1    c á 
+'`' + 'e' >  U+00E9   c é 
+'`' + 'i' >  U+00ED   c í 
+'`' + 'o' >  U+00F3   c ó 
+'`' + 'u' >  U+00FA   c ú 
+
+c Nasalized vowels (with ogonek) for phonology paper   
+'~' + 'a' > u+0105   c ą 
+'~' + 'e' >  U+0119  c ę 
+'~' + 'i' >  U+012f  c į 
+'~' + 'o' >  U+01eb  c ǫ 
+'~' + 'u' >  U+0173  c ų 
+
+c EOF

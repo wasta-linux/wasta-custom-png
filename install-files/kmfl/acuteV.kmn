@@ -1,0 +1,37 @@
+c Keyboard for LanguageName, Province, person who works there  c Edit these items
+c Prepared by Kim Blewett, SAMPLE keyboard for Keyman and KMFL
+c 20-Feb-2017
+
+NAME "AcuteVs"        c change to LanguageName in the quotation marks
+BITMAP "A.bmp"        c replace with the Icon file you wish to use, in quotation marks
+VERSION 7.0           c for Linux/Wasta, keep the version number at 7.0 or below
+
+c This keyboard should be independent of the user's system keyboard layout
+c For help see the Language Software Services office (lr-lss@sil.org.pg)
+
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main) 
+
+group(main) using keys
+
+c replace the ; with your desired trigger key in each line below. You may swap places so the
+c trigger key comes after the vowel, e.g., 'a' + ';' > U+00E1
+c the c starts a comment; add notes if needed to help someone else understand
+
+';' + 'a' > U+00E1    c [á]
+';' + 'e' > U+00E9    c [é]
+';' + 'i' > U+00ED    c [í]
+';' + 'o' > U+00F3    c [ó]
+';' + 'u' > U+00FA    c [ú]
+
+';' + 'A' > U+00C1    c [Á]
+';' + 'E' > U+00C9    c [É]
+';' + 'I' > U+00CD    c [Í]
+';' + 'O' > U+00D3    c [Ó]
+';' + 'U' > U+00DA    c [Ú]
+
+';' + ';' > U+003B    c [;]
+';' + 'n' > U+014B    c [ŋ]
+';' + 'N' > U+014A    c [Ŋ]

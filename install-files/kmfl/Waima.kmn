@@ -1,0 +1,27 @@
+c Keyboard for Waima, Central Prov. (Namsoo Kim)
+c Prepared by KBlewett
+c 14-Feb-17
+
+NAME "Waima"
+BITMAP "W.bmp"
+VERSION 7.0
+
+begin Unicode > use(main) 
+
+group(main) using keys
+
+';' + 'a' > U+00E1    c [á]
+';' + 'e' > U+00E9    c [é]
+';' + 'i' > U+00ED    c [í]
+';' + 'o' > U+00F3    c [ó]
+';' + 'u' > U+00FA    c [ú]
+
+';' + 'A' > U+00C1    c [Á]
+';' + 'E' > U+00C9    c [É]
+';' + 'I' > U+00CD    c [Í]
+';' + 'O' > U+00D3    c [Ó]
+';' + 'U' > U+00DA    c [Ú]
+
+';' + ';' > U+003B    c [;]
+';' + 'n' > U+014B    c [ŋ]
+';' + 'N' > U+014A    c [Ŋ]

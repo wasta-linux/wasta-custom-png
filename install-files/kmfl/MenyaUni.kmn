@@ -1,0 +1,27 @@
+c Keyboard for Menya SHP (Whitehead)
+c UNICODE version
+c Windows Keyman Version 7.0
+c  K Blewett, Nov 2016
+
+NAME "Menya Unicode"
+BITMAP "M.bmp"
+VERSION 7.0
+
+c This keyboard should be independent of the user's
+c system keyboard layout, except for angle-brackets which are 
+c typed with SH-ALT-period,comma on US keyboard
+store(&MnemonicLayout) '1'
+
+c *******************************************************************
+begin Unicode > use(main)
+
+group(main) using keys
+
+c to type 'ä' and 'Ä' use f
+'f' > U+00E4 	c 'ä'
+'F' > U+00C4    c 'Ä'
+
+c to type ŋ and Ŋ use c
+'c' > U+014B    c lower case eng  ŋ
+'C' > U+014A    c upper case eng  Ŋ
+

@@ -1,0 +1,24 @@
+c Keyboard for Edolo: SHP, Hela, Western Provinces (Steve Miller)
+c Prepared by Kim Blewett for Wasta Linux, Unicode syntax
+c 8-Feb-2016
+
+NAME "Edolo"
+BITMAP "E.bmp"
+VERSION 7.0
+
+begin Unicode > use(main) 
+
+group(main) using keys
+
+c diaeresis vowels  ÄËÏÖÜäëïöü
+';' + 'a' > U+00E4    c ä
+';' + 'e' > U+00EB    c ë
+';' + 'i' > U+00EF    c ï
+';' + 'o' > U+00F6    c ö
+';' + 'u' > U+00FC    c ü
+
+';' + 'A' > U+00C4    c Ä
+';' + 'E' > U+00CB    c Ë
+';' + 'I' > U+00CF    c Ï
+';' + 'O' > U+00D6    c Ö
+';' + 'U' > U+00DC    c Ü

@@ -85,6 +85,35 @@ done
 paperconfig -p a4
 
 # ------------------------------------------------------------------------------
+# Add .kmfl placeholder to each user/home folder
+# ------------------------------------------------------------------------------
+
+for USER_HOME in /home/*;
+do
+    USER_HOME_NAME=$(basename $USER_HOME)
+
+    # only process if "real user" (so not for wasta-remastersys, etc.)
+    if id "$USER_HOME_NAME" >/dev/null 2>&1;
+    then
+        echo
+        echo "*** adding .kmfl placeholder directory for $USER_HOME_NAME"
+        echo
+
+        # sleep needed to avoid race condition that was crashing cinnamon??
+        sleep 2
+
+        # copy in .kmfl placeholder folder for users to add layouts to
+        cp -uR $DIR/.kmfl \
+            $USER_HOME/
+
+        # ensure all ownership is correct
+        chown -R $USER_HOME_NAME:$USER_HOME_NAME \
+            $USER_HOME/.kmfl
+
+    fi
+done
+
+# ------------------------------------------------------------------------------
 # Finished
 # ------------------------------------------------------------------------------
 
