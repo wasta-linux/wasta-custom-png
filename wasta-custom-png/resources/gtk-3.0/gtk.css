@@ -1,0 +1,6 @@
+*{
+
+-GtkScrollbar-has-backward-stepper: 1;
+-GtkScrollbar-has-forward-stepper: 1;
+
+}

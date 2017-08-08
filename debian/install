@@ -1,4 +1,6 @@
 wasta-custom-png              usr/share
 install-files/kmfl            usr/share
 install-files/Keyman_helps    usr/share/wasta-resources
+install-files/gschema-overrides/*    usr/share/glib-2.0/schemas
+install-files/backgrounds			 usr/share
 

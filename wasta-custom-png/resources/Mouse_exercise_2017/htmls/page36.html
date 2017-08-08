@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script src="../scripts/scripts.js"></script>
+	<meta charset="UTF-8">
+	<title>Page 36</title>
+</head>
+
+<body>
+	<h2>Fill out this form</h2>
+	<div id="form36">
+		<form name="" method="post" action="">
+			<p>First Name: <input type="text" id="fname" name="fname" size=20 onblur="checkTextField(fname, lname);"></p>
+			<p>Last Name: <input type="text" id="lname" name="lname" size=20 onblur="checkTextField(fname, lname);"></p>
+			<p>Address: <textarea name="address" cols="25" rows="5"></textarea></p>
+			<p><img src="../img/send.gif">&nbsp;&nbsp;&nbsp; <input type="reset" value="Start Over"></p>
+		</form>
+		<p>"Send application" button does not work.</p>
+		<p>"Start over" button clears the boxes of text.</p>
+	</div>
+	<div>
+		<ol>
+			<li>Click inside box beside First Name.
+			</br>The blinking line in box means the computer is looking at this box.</li>
+			<li>Type your first name.</br>
+				For capital letters: hold down <strong>Shift</strong> on keyboard and press desired letter.</li>
+			<li>Press <strong>Tab</strong> on left side of keyboard.</br>
+				The blinking line is now in the Last Name box.</li>
+			<li>Type your last name.</li>
+			<li>Press <strong>Tab</strong> on left side of keyboard.</li>
+			<li>Type your mailing address.</li>
+			<li>At the end of the first line, press <strong>Enter</strong> on the right side of keyboard to go to next line. </li>
+		</ol>
+		</br></br></br></br></br>
+		
+		</br>
+		<span id="linktonext">
+			<form>
+				To go to the next page, click <strong>37</strong>------->
+				<select name="dest" size=4>
+					<option selected value="page1.html">1</option>
+					<option value="page2.html">2</option>
+					<option value="page3.html">3</option>
+					<option value="page10.html">10</option>
+					<option value="page16.html">16</option>
+					<option value="page37.html">37</option>
+					<option value="page16.html">16</option>
+					<option value="page10.html">10</option>
+				</select>
+				<input type="button" value="Go" onClick="surfto(this.form)">
+			</form>
+			</br>
+			<p>If can't remember what to do, <a href="page32.html">click here</a>.</p>
+		</span>
+	</div>
+</body>
+</html>

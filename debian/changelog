@@ -1,8 +1,9 @@
-wasta-custom-png (1.1.1) UNRELEASED; urgency=medium
+wasta-custom-png (1.1.2) xenial; urgency=medium
 
   * added sample keyman layouts, placeholder dir ~/.kmfl 
+  * added for all users ~/.config/gtk-3.0/gtk.css for scrollbar arrows
 
- -- Kim Blewett <kim_blewett@sil.org>  Sat, 29 Jul 2017 15:53:11 +1000
+ -- Kim Blewett <kim_blewett@sil.org>  Mon, 07 Aug 2017 21:57:36 +1000
 
 wasta-custom-png (1.0.2) xenial; urgency=medium
 

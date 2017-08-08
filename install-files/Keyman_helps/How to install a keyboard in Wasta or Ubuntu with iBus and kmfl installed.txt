@@ -1,20 +1,52 @@
 Prep/Setup
-1. Check to see if they have 'iBus' (type Windows key, type iBus)
-1b. If it's Wasta there should already be an 'EN' icon in the tray so you're good.
-2. If they do, you'll see "Do you want to run the iBus daemon?") Say yes.
-2b. If they don't, bring the computer up to Uka.
-3. You should see an icon in the bottom right "tray", probably 'EN'. Proceed...
+1. If you have a Wasta computer IBus should be running: you should see 'EN' or a
+      bordered square with a letter in the tray—the iBus keyboard indicator icon.
+         If this is visible click on it to see which keyboards are already
+         installed on the computer. If you see the keyboard you need you are 
+         good to go. Otherwise skip to (3) below.
+2a. If there is no keyboard icon, type the Windows key, then type "ibus" into the
+    Search bar at the top of the Menu. 
+2b. If you see the item: "IBus Preferences", click it to start the IBus daemon. 
+    Say "yes" to run the daemon and a keyboard indicator icon should appear.
+         Then go to (3).
+2c. If IBus Preferences is not available, request help from the LSS office at Ukarumpa.
 
-Install keyboard
-1. Open Files (Type Windows key, type 'files')
-2. Show Hidden Files (tick on View Menu)
-3. Browse to .local, then share (double-click to open)
-4. Copy 'kmfl' folder into 'share'
-   (you're done in Files)
+3. Install keyboard (if IBus is installed).
+   3.1. Open Files: Type Windows key, type 'files'.
+   3.2. In the Files window show Hidden Files: Tick this item on the View Menu.
+        Hidden file names in Linux begin with fullstop '.', and are usually listed
+        following the "normal" files.  
+   3.3a. If .kmfl is in the list double-click to open it. Skip to 4.
+   3.3b. If .kmfl is not visible (but other .xxx folders are), do 
+        File > Create new folder. Name it '.kmfl' (Enter to set the new name). 
+        Double-click to enter .kmfl and create another new folder inside it 
+        named 'icons'. Use lower-case only for these file names. 
+        So the folder structure inside your user's Home folder is 
+	   /home/[kim]/.kmfl/icons/ . 
+        Linux shortcut for your home folder is '~/', so
+           ~/.kmfl/icons/ specifies the same location as /home/[username]/.kmfl/icons.
+   3.4. Copy your xxx.kmn file into .kmfl/, and copy the icon associated with it
+        into icons/. (Now you may close the Files window.)
 
-Update iBus
-1.
+4. Update iBus
+   4.1. Right-click on the IBus keyboard icon, choose Restart. The icon will 
+        disappear and reappear, indicating that IBus has restarted.
+   4.1b. Right-click again on the IBus icon, choose Preferences.
+   4.2. If you don't see a keyboard icon as in the screenshot in (1), type the
+        Windows key, then type ibus, open IBus Preferences, say "yes" if it asks
+        whether you want to run the "daemon".
+   4.3. Click the second tab, Input Method.
+   4.4. Click the Add button at the right.
+   4.5. In the Select a Keyboard window click the three vertical dots.
+   4.6. Drag the scrollbar slider all the way to the bottom and choose Other.
+   4.7. Scroll down to the keyboard you copied in (3), select it and 
+        click the Add button.
+   4.8. When the new keyboard appears in the Input Method list you are done.
+        Close the iBus Preferences window. 
 
-Peter Fidock network-support@wycliffe.org.au
-set the computer up (donated computers) (Vico?)
-Bruce?
+5. You should be able to click the IBus keyboard icon and see a choice between 
+   English and your language's keyboard. Once you choose a keyboard that choice
+   should remain active until you change it again. If you are unable to type 
+   a character from your language's keyboard check the IBus keyboard icon to be
+   sure that keyboard is active.
+

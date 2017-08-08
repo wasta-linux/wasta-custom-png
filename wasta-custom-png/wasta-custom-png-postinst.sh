@@ -97,7 +97,7 @@ do
     then
         echo
         echo "*** adding .kmfl placeholder directory for $USER_HOME_NAME"
-        echo
+        echo 
 
         # sleep needed to avoid race condition that was crashing cinnamon??
         sleep 2
@@ -106,12 +106,56 @@ do
         cp -uR $DIR/.kmfl \
             $USER_HOME/
 
+        echo
+        echo "*** adding scrollbar arrows for $USER_HOME_NAME"
+        echo 
+
+        # sleep needed to avoid race condition that was crashing cinnamon??
+        sleep 2
+
+        # copy in gtk.css tweak for scrollbar arrows
+        cp -uR $DIR/gtk-3.0 \
+            $USER_HOME/.config/
+
+        echo
+        echo "*** adding Mouse Exercise to Desktop for $USER_HOME_NAME"
+        echo 
+
+        # sleep needed to avoid race condition that was crashing cinnamon??
+        sleep 2
+
+        # copy in Mouse Exercise folder
+        cp -uR $DIR/Mouse_exercise_2017 \
+            $USER_HOME/Desktop/
+	mv $USER_HOME/Desktop/Mouse_exercise_2017 $USER_HOME/Desktop/Mouse_Exercise
+
         # ensure all ownership is correct
         chown -R $USER_HOME_NAME:$USER_HOME_NAME \
             $USER_HOME/.kmfl
 
+        chown -R $USER_HOME_NAME:$USER_HOME_NAME \
+            $USER_HOME/.config/gtk-3.0
+
+        chown -R $USER_HOME_NAME:$USER_HOME_NAME \
+            $USER_HOME/Desktop/Mouse_Exercise
+
     fi
 done
+
+# ------------------------------------------------------------------------------
+# Dconf / Gsettings Default Value adjustments
+# ------------------------------------------------------------------------------
+# Override files in /usr/share/glib-2.0/schemas/ folder.
+#   Values in z_20_wasta-custom-png.gschema.gschema.override will override values
+#   in z_10_wasta-base-setup.gschema.override which will override Mint defaults.
+echo
+echo "*** Updating dconf / gsettings default values"
+echo
+# Sending any "error" to null (if a key isn't found it will return an error,
+#   but for different version of Cinnamon, etc., some keys may not exist but we
+#   don't want to error in this case: suppressing errors to not worry user.
+glib-compile-schemas /usr/share/glib-2.0/schemas/ 2>/dev/null || true;
+
 
 # ------------------------------------------------------------------------------
 # Finished
